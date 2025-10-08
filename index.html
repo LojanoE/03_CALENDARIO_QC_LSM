@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notición - Calendario Inteligente</title>
+  <!-- FullCalendar JS (incluye CSS) -->
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+  <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <h2>➕ Registrar Actividad</h2>
+    <div class="panel">
+      <div class="form-group">
+        <label>Inicio:</label>
+        <input type="datetime-local" id="inicio" required />
+      </div>
+      <div class="form-group">
+        <label>Fin:</label>
+        <input type="datetime-local" id="fin" required />
+      </div>
+      <div class="form-group">
+        <label>Título:</label>
+        <input type="text" id="titulo" placeholder="Ej: Reunión de equipo" required />
+      </div>
+      <div class="form-group">
+        <label>Asignado a:</label>
+        <input type="text" id="asignado" placeholder="Nombre de la persona" required />
+      </div>
+      <div class="form-group">
+        <label>Descripción:</label>
+        <textarea id="descripcion" rows="2" placeholder="Detalles de la actividad..."></textarea>
+      </div>
+      <div class="form-group">
+        <label>Estado:</label>
+        <select id="estado">
+          <option value="por hacer">Por hacer</option>
+          <option value="en ejecución">En ejecución</option>
+          <option value="terminado">Terminado</option>
+        </select>
+      </div>
+      <button id="btnGuardar">Guardar Actividad</button>
+      <p id="mensaje"></p>
+    </div>
+
+    <h2>🔍 Filtros del Calendario</h2>
+    <div class="panel">
+      <div class="filtros-row">
+        <div class="filtro-item">
+          <label>Asignado a:</label>
+          <select id="filtroAsignado">
+            <option value="">Todos</option>
+          </select>
+        </div>
+        <div class="filtro-item">
+          <label>Desde:</label>
+          <input type="date" id="filtroDesde" />
+        </div>
+        <div class="filtro-item">
+          <label>Hasta:</label>
+          <input type="date" id="filtroHasta" />
+        </div>
+        <div class="filtro-item" style="align-self: flex-end;">
+          <button id="btnAplicarFiltros">Aplicar filtros</button>
+          <button id="btnLimpiarFiltros" class="btn-secondary">Restablecer</button>
+        </div>
+      </div>
+    </div>
+
+    <h2>📅 Calendario de Actividades</h2>
+    <div id="calendar"></div>
+
+    <!-- Modal para cambiar estado -->
+    <div id="estadoModal">
+      <div id="estadoContenido">
+        <h3>Cambiar estado</h3>
+        <p id="modalEventoTitulo"></p>
+        <select id="nuevoEstado">
+          <option value="por hacer">Por hacer</option>
+          <option value="en ejecución">En ejecución</option>
+          <option value="terminado">Terminado</option>
+        </select>
+        <br><br>
+        <button id="btnGuardarEstado">Guardar</button>
+        <button id="btnCancelarModal" class="btn-secondary">Cancelar</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Tu JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

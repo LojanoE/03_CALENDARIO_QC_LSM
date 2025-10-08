@@ -1,0 +1,113 @@
+:root {
+  --por-hacer: #bdbdbd;
+  --en-ejecucion: #ff9800;
+  --terminado: #4caf50;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #1a73e8;
+  margin: 20px 0 15px;
+}
+
+.panel {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin: 12px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background: #1a73e8;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+button:hover {
+  background: #0d5bbd;
+}
+
+.btn-secondary {
+  background: #6c757d;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+#mensaje {
+  margin-top: 10px;
+  font-weight: bold;
+  min-height: 22px;
+}
+
+#calendar {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.filtros-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filtro-item {
+  flex: 1;
+  min-width: 180px;
+}
+
+#estadoModal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+#estadoContenido {
+  background: white;
+  margin: 15% auto;
+  padding: 20px;
+  width: 320px;
+  border-radius: 8px;
+  text-align: center;
+}
