@@ -1,5 +1,5 @@
 // 🔴 ¡¡REEMPLAZA ESTA URL POR TU URL DE GOOGLE APPS SCRIPT!!
-const API_URL = "https://script.google.com/macros/s/AKfycbwk2douAQoK3KmfWYNB8Lse-5NUWHvjg6wzgnDxk2IFL5u9GlR2mqf741Enw0IPZ75h/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbw9gk9eK4VNDYI0kX9wv1iK4NKBd4NdMs4lCYdjzneC8JeVnB_EHuWTkOsfUIGTwkvO/exec";
 
 let todosLosEventos = [];
 let calendarInstance = null;
